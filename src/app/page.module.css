@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.gotoUsers {
+  border-bottom: 1px solid var(--orange);
+}
