@@ -8,8 +8,8 @@ import '@/styles/variable.css'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'TODO 앱',
-  description: 'TODO 앱'
+  title: 'StrawBoard',
+  description: 'StrawBoard 프로젝트'
 }
 
 export default async function RootLayout({ children }: PropsWithChildren) {
