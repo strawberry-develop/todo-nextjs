@@ -1,10 +1,9 @@
 import { PropsWithChildren } from 'react'
-import ReactQueryProviders from '@/components/react-query-providers'
+import ReactQueryProviders from '@/providers/react-query-providers'
 import type { Metadata } from 'next'
 import { pretendard } from '../../public/fonts/Pretendard'
 
 import '@/styles/normalize.css'
-import '@/styles/variable.css'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
