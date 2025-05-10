@@ -14,7 +14,8 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="ko">
+    // className에 따라 테마 설정
+    <html lang="ko" className="light">
       <body className={pretendard.className}>
         <ReactQueryProviders>{children}</ReactQueryProviders>
       </body>
