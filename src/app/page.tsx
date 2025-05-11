@@ -1,6 +1,7 @@
 import Logo from '@/components/common/Logo'
 import Navigation from '@/components/home/Navigation'
 import Link from 'next/link'
+import ArrowRightIcon from '../../public/images/arrow-right.svg'
 import GoogleIcon from '../../public/logos/google.svg'
 
 export default async function Home() {
@@ -46,15 +47,7 @@ export default async function Home() {
               className="flex items-center justify-center px-7 py-4 bg-white/90 backdrop-blur-sm border border-slate-200 rounded-full shadow-md hover:shadow-lg hover:bg-white text-slate-700 font-medium"
             >
               <span>기능 살펴보기</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 ml-2 transform"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
+              <ArrowRightIcon className="h-5 w-5 ml-2 transform" />
             </Link>
           </div>
         </div>
