@@ -1,10 +1,15 @@
+'use client'
+
 import Logo from '@/components/common/Logo'
 import Navigation from '@/components/home/Navigation'
 import Link from 'next/link'
+import { signIn, useSession } from 'next-auth/react'
 import ArrowRightIcon from '../../public/images/arrow-right.svg'
 import GoogleIcon from '../../public/logos/google.svg'
 
-export default async function Home() {
+const Home = () => {
+  const { data } = useSession()
+
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       <Navigation />
@@ -36,12 +41,16 @@ export default async function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
-            <button className="flex items-center justify-center gap-3 px-7 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 font-medium">
+            <button
+              className="flex items-center justify-center gap-3 px-7 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 font-medium"
+              onClick={() => signIn('google')}
+            >
               <span className="transform transition-transform">
                 <GoogleIcon width={20} height={20} />
               </span>
               <span className="transform transition-transform">무료로 시작하기</span>
             </button>
+
             <Link
               href="/features"
               className="flex items-center justify-center px-7 py-4 bg-white/90 backdrop-blur-sm border border-slate-200 rounded-full shadow-md hover:shadow-lg hover:bg-white text-slate-700 font-medium"
@@ -55,3 +64,4 @@ export default async function Home() {
     </div>
   )
 }
+export default Home
